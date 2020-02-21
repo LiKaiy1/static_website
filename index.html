@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav-wrapper">
+
+          <div class="left-side">
+            <div class="nav-link-wrapper">
+                <a href="index.html">Home</a>
+            </div>
+            <div class="nav-link-wrapper">
+                  <a href="about.html">About</a>
+                  <!-- <a href="https://www.youtube.com">Subscribe Travel on youtube!</a> -->
+            </div>
+            <div class="nav-link-wrapper">
+                  <!-- <a href="about.html">About</a> -->
+                  <a href="https://www.youtube.com">Subscribe Yue Hao on youtube!</a>
+            </div>
+            <div class="nav-link-wrapper">
+                  <!-- <a href="about.html">About</a> -->
+                  <a href="#video">Conan on food!</a>
+            </div>
+            <div class="topnav">
+                <input type="text" placeholder="Search..">
+              </div>
+          </div>
+          <div class="right-side">
+            <div class="brand">
+              <!-- <div>YUE HAO</div> -->
+              <a href="about.html" text-decoration:none>Yue Hao</a>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="content-wrapper">
+
+      <div class="portfolio-items-wrapper">
+
+        <div class="portfolio-item-wrapper">
+            <div class="portfolio-img-background" style="background-image: url(images/1.jpg)"></div>
+            <div class="img-text-wrapper">
+              <div class="subtitle">
+                This is the BOLD Ramen~
+              </div>
+            </div>
+        </div>
+        <div class="portfolio-item-wrapper">
+            <div class="portfolio-img-background" style="background-image: url(images/2.jpg)">
+            </div>
+            <div class="img-text-wrapper">
+              <div class="subtitle">
+                Famous Cha Shu Rice!
+              </div>
+            </div>
+        </div>
+        <div class="portfolio-item-wrapper">
+            <div class="portfolio-img-background" style="background-image: url(images/3.jpg)">
+            </div>
+            <div class="img-text-wrapper">
+              <div class="subtitle">
+                Cheeky Yamm ^(^_^)^
+              </div>
+            </div>
+        </div>
+        <div class="portfolio-item-wrapper">
+            <div class="portfolio-img-background" style="background-image: url(images/4.jpg)">
+            </div>
+            <div class="img-text-wrapper">
+              <div class="subtitle">
+                Hippe San Ramen~
+              </div>
+            </div>
+        </div>
+        <div class="portfolio-item-wrapper">
+            <div class="portfolio-img-background" style="background-image: url(images/5.jpg)">
+            </div>
+            <div class="img-text-wrapper">
+              <div class="subtitle">
+                NAKED AHEAD!
+              </div>
+            </div>
+        </div>
+        <div class="portfolio-item-wrapper">
+            <div class="portfolio-img-background" style="background-image: url(images/6.jpg)">
+            </div>
+            <div class="img-text-wrapper">
+              <div class="subtitle">
+                NOT DONE with the OLD SCHOOL ramen yet!
+              </div>
+            </div>
+        </div>
+
+      </div>
+      <div class="portfolio-item-wrapper">
+      <div class="diySector" style="background-image: url(images/bcg.jpg)">
+        <h1>Welcome to Yue Hao's website!</h1>
+        <p>
+          <br>Food is always one of the most important aspect of life.
+          <br>If one failed to enjoy food, one cannot see the beauty of life.
+          <br>To embrace the gift from mother nature,
+          <br>we will need to be capable of exploring delicious food.</p>
+      </div>
+    </div>
+    <div class="video-content-wrapper" padding=0px margin=0px>
+      <video id="video" src="videos/1.mp4" autoplay poster="posterimage.jpg"  width=100% height="720" controls>
+
+      </video>
+
+      </div>
+    </div>
+    <div class="footer">
+      <div class="module-content grid-container">
+        <div class="logo-badge">
+          <figure>
+          <img src="images/logos/logo1.jpg" alt="Logo">
+        </figure>
+      </div>
+      <div class="copyright">
+                 Handmade by Hao Yue ~
+              </div>
+          </div>
+  </div>
+  </body>
+  <script>
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+
+    portfolioItems.forEach(portfolioItem => {
+      portfolioItem.addEventListener('mouseover', () => {
+        console.log(portfolioItem.childNodes[1].classList)
+        portfolioItem.childNodes[1].classList.add('image-blur');
+      });
+
+      portfolioItem.addEventListener('mouseout', () => {
+        console.log(portfolioItem.childNodes[1].classList)
+        portfolioItem.childNodes[1].classList.remove('image-blur');
+      });
+    });
+
+
+
+  </script>
+
+
+
+</html>
